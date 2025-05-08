@@ -15,7 +15,7 @@ const AdminLigaDashboard = () => {
             try {
                 // Realizamos múltiples solicitudes para cada ID de liga
                 const requests = ligas.map((ligaId) =>
-                    axios.get(`endpoints.buscarLigaPorId(${ligaId})`)
+                    axios.get(`https://backendtorneo.onrender.com/api/ligas/buscarporid/${ligaId}`)
                 );
 
                 // Esperamos a que todas las solicitudes se completen
