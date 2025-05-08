@@ -21,7 +21,7 @@ const FormUsuarioLiga = () => {
         };
 
         const response = await axios.post(
-            endpoints.crearLigaUsuarios(), nuevoUsuarioLiga, 
+            endpoints.crearLigaUsuario(), nuevoUsuarioLiga, 
             {
                 headers: {
                     Authorization: `Bearer ${token}`,
