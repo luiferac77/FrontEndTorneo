@@ -1,0 +1,65 @@
+header{
+    @apply
+        bg-green-700 text-white p-4;
+}
+.header-nav{
+    @apply 
+        flex container mx-auto justify-between; 
+}
+.header-title{
+    @apply
+        text-2xl font-bold
+}
+.main-page{
+    @apply
+        relative w-full min-h-screen;
+}
+.section-main-page{
+    @apply
+        relative z-10 mx-auto block w-4xl;
+}
+
+.section-title-main-page{
+    @apply
+        flex flex-col pt-30 justify-center;
+}
+.section-title-main-page h2{
+    @apply
+        text-white text-5xl text-center;
+}
+
+
+
+.btnMainIngresar{
+    @apply
+        relative pt-8 w-2xl mx-auto;
+}
+
+.btn{
+    @apply
+        rounded-2xl px-4 py-2 text-center;
+}
+
+.btn-outline-primary{
+    @apply
+        border border-blue-600 text-blue-600 cursor-pointer hover:bg-blue-600 hover:text-white transition ease-in-out;
+}
+
+.section-form{
+    @apply
+        flex flex-col justify-center items-center space-y-10;
+}
+
+.section-form form{
+    @apply
+        border border-gray-300 p-4 rounded-md shadow-xl w-md space-y-4;
+}
+
+.form-input {
+    @apply
+    flex border border-gray-300 rounded-md p-2;
+}
+
+.input-box{
+    @apply pl-2 outline-none;
+}
