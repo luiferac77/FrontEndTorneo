@@ -4,6 +4,7 @@ import { User, Password, SignIn, SoccerBall } from '@phosphor-icons/react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import useAuth from '../context/auth/UseAuth';
+import { endpoints } from '../data/api';
 
 
 const FormLogin = () => {
@@ -20,7 +21,7 @@ const FormLogin = () => {
 
     const onSubmit = async (data) => {
         try {
-            const response = await axios.post('http://localhost:3000/api/usuarios/login',{
+            const response = await axios.post(endpoints.loginUsuario(),{
                 email: data.usuario, 
                 clave: data.clave
             });

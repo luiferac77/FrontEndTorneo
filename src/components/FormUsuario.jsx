@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import useAuth from '../context/auth/UseAuth';
 import axios from 'axios';
-
+import { endpoints } from '../data/api';
 const FormUsuario = () => {
   const {register, formState: {errors}, handleSubmit} = useForm();
   const navigate = useNavigate();
@@ -20,7 +20,7 @@ const FormUsuario = () => {
         };
 
         const response = await axios.post(
-            'http://localhost:3000/api/usuarios/crear', nuevoUsuario, 
+            endpoints.crearUsuario(), nuevoUsuario, 
             {
                 headers: {
                     Authorization: `Bearer ${token}`,

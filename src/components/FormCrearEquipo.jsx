@@ -2,6 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import { endpoints } from '../data/api';
 
 const FormCrearEquipo = () => {
     const { ligaId } = useParams();
@@ -9,7 +10,7 @@ const FormCrearEquipo = () => {
 
     const onSubmit = async (data) => {
         try {
-            const response = await axios.post('http://localhost:3000/api/equipos/crear', {
+            const response = await axios.post(endpoints.crearEquipo(), {
                 ...data,
                 liga_id: ligaId
             });

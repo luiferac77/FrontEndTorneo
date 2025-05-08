@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import useAuth from '../context/auth/UseAuth';
 import axios from 'axios';
+import { endpoints } from '../data/api';
 
 const FormPersona = () => {
   const {register, formState: {errors}, handleSubmit} = useForm();
@@ -20,7 +21,7 @@ const FormPersona = () => {
         };
 
         const response = await axios.post(
-            'http://localhost:3000/api/personas/crear', nuevaPersona, 
+            endpoints.crearPersona(), nuevaPersona, 
             {
                 headers: {
                     Authorization: `Bearer ${token}`,

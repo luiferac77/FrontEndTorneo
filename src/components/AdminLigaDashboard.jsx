@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import useAuth from '../context/auth/UseAuth';
+import { endpoints } from '../data/api';
 import axios from 'axios';
 
 const AdminLigaDashboard = () => {
@@ -14,7 +15,7 @@ const AdminLigaDashboard = () => {
             try {
                 // Realizamos múltiples solicitudes para cada ID de liga
                 const requests = ligas.map((ligaId) =>
-                    axios.get(`http://localhost:3000/api/ligas/buscarporid/${ligaId}`)
+                    axios.get(`endpoints.buscarLigaPorId(${ligaId})`)
                 );
 
                 // Esperamos a que todas las solicitudes se completen

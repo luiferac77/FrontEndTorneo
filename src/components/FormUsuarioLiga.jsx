@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import useAuth from '../context/auth/UseAuth';
 import axios from 'axios';
+import { endpoints } from '../data/api';
 
 const FormUsuarioLiga = () => {
   const {register, formState: {errors}, handleSubmit} = useForm();
@@ -20,7 +21,7 @@ const FormUsuarioLiga = () => {
         };
 
         const response = await axios.post(
-            'http://localhost:3000/api/ligaUsuario/crear', nuevoUsuarioLiga, 
+            endpoints.crearLigaUsuarios(), nuevoUsuarioLiga, 
             {
                 headers: {
                     Authorization: `Bearer ${token}`,
